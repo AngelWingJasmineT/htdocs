@@ -23,8 +23,13 @@ else
 </head>
 <body>
 
-スタッフが選択されていません。<br/>
-<a href="staff_list.php">戻る</a>
+ショップ管理トップメニュー<br/>
+<br/>
+<a href="../staff/staff_list.php">スタッフ管理</a><br/>
+<br/>
+<a href="../product/pro_list.php">商品管理</a><br/>
+<br/>
+<a href="staff_logout.php">ログアウト</a><br/>
 
 </body>
 </html>
