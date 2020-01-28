@@ -1,3 +1,8 @@
+<div class="head">
+<div class="title">
+JasmineT Shop
+</div>
+<div class="login">
 <?php
 session_start();
 session_regenerate_id(true);
@@ -16,15 +21,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_product.css">
 <title>Shop</title>
 </head>
 <body>
 
+<div class="container">
 <?php
 
 try
@@ -58,7 +67,7 @@ else
 {
 		$disp_gazou='<img src="../product/gazou/'.$pro_gazou_name.'">';
 }
-print '<a href="shop_cartin.php?procode='.$pro_code.'">カートにいれる</a><br/><br/>';
+print '<a href="shop_cartin.php?procode='.$pro_code.'"><div class="link">カートにいれる</div></a><br/><br/>';
 }
 catch (Exception $e)
 {
@@ -68,15 +77,15 @@ catch (Exception $e)
 
 ?>
 
-商品情報参照<br/>
+<div class="menu">商品情報参照</div><br/>
 <br/>
-商品コード<br/>
+<div class="menus">商品コード</div><br/>
 <?php print $pro_code; ?>
 <br/>
-商品名<br/>
+<div class="menus">商品名</div><br/>
 <?php print $pro_name; ?>
 <br/>
-価格<br/>
+<div class="menus">価格</div><br/>
 <?php print $pro_price; ?>円
 <br/>
 <?php print $disp_gazou; ?>
@@ -86,5 +95,6 @@ catch (Exception $e)
 <input type="button" onclick="history.back()" value="戻る">
 </form>
 
+</div>
 </body>
 </html>
