@@ -1,3 +1,8 @@
+<div class="head">
+<div class="title">
+JasmineT Shop
+</div>
+<div class="login">
 <?php
 session_start();
 session_regenerate_id(true);
@@ -16,14 +21,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_list.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -42,7 +52,7 @@ $stmt->execute();
 
 $dbh=null;
 
-print '商品一覧<br/><br/>';
+print '<div class="menu">商品一覧</div><br/>';
 
 while(true)
 {
@@ -59,7 +69,7 @@ while(true)
 }
 
 print '<br/>';
-print '<a href="shop_cartlook.php">カートを見る</a><br/>';
+print '<a href="shop_cartlook.php"><div class="link">カートを見る</div></a><br/>';
 
 }
 catch (Exception $e)
@@ -69,6 +79,8 @@ catch (Exception $e)
 }
 
 ?>
+
+</div>
 
 </body>
 </html>
