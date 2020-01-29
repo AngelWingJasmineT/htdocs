@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -65,27 +76,29 @@ catch (Exception $e)
 
 ?>
 
-商品修正<br/>
+<div class="menu">商品修正</div>
 <br/>
-商品コード<br/>
+<div class="caption">商品コード</div>
 <?php print $pro_code; ?>
 <br/>
 <br/>
 <form method="post" action="pro_edit_check.php" enctype="multipart/form-data">
 <input type="hidden" name="code" value="<?php print $pro_code; ?>">
 <input type="hidden" name="gazou_name_old" value="<?php print $pro_gazou_name_old; ?>">
-商品名<br/>
+<div class="caption">商品名</div>
 <input type="text" name="name" style="width:200px" value="<?php print $pro_name; ?>"><br/>
-価格<br/>
+<br/>
+<div class="caption">価格</div>
 <input type="text" name="price" style="width:50px" value="<?php print $pro_price; ?>">円<br/>
 <br/>
 <?php print $disp_gazou; ?>
-<br/>
-画像を選んでください。<br/>
+<div class="caption">画像を選んでください。</div>
 <input type="file" name="gazou" style="width:400px"><br/>
+<br/>
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">
 </form>
 
+</div>
 </body>
 </html>

@@ -33,7 +33,16 @@ body{
 }
 
 .menus{
-  color:pink;
+  color:blue;
+}
+
+.caption{
+  font-weight: bold;
+}
+
+.alert{
+  color:red;
+  font-weight: bold;
 }
 
 .container{
@@ -43,9 +52,31 @@ body{
   padding-bottom: 20px;
 }
 
-a{
+.container a{
   text-decoration: none;
-  color:pink;
+  display: block;
+  background-color: red;
+  color:white;
+  height:30px;
+  width:200px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#item{
+  text-decoration: none;
+  display: block;
+  background-color:pink;
+  border-radius: 10px;
+  color:white;
+  height:30px;
+  width:150px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .link{
@@ -58,13 +89,19 @@ a{
   font-weight: bold;
 }
 
-input{
+table{
+  margin-bottom: 20px;
+  border-color: red;
+  border-style:solid;
+}
+
+/* input{
   background-color: red;
   color:white;
   height:30px;
-  width:150px;
+  width:100px;
   text-align: center;
   line-height: 30px;
   border-color: red;
   font-size: 15px;
-}
+} */

@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -16,15 +22,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
 <title>Shop</title>
 </head>
 <body>
 
+<div class="container">
 <?php
 
 try
@@ -72,7 +82,7 @@ foreach($cart as $key => $val)
     }
     else
     {
-        $pro_gazou[]='<img src="../product/gazou/'.$rec['gazou'].'">';
+        $pro_gazou[]='<img src="../product/gazou/'.$rec['gazou'].'" width=100px height=100px>';
     }
 }
 $dbh=null;
@@ -86,7 +96,7 @@ catch (Exception $e)
 
 ?>
 
-カートの中身<br/>
+<div class="menu">カートの中身</div><br/>
 <br/>
 <form method="post" action="kazu_change.php">
 <table border="1">
@@ -127,5 +137,6 @@ catch (Exception $e)
     }
 ?>
 
+</div>
 </body>
 </html>

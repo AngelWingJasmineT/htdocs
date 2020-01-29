@@ -1,10 +1,19 @@
+<div class="head">
+  <div class="title">
+  JasmineT Shop
+  </div>
+</div>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 require_once('../common/common.php');
@@ -32,7 +41,7 @@ if($onamae=='')
 }
 else
 {
-    print 'お名前<br/>';
+    print '<div class="caption">お名前</div>';
     print $onamae;
     print '<br/><br/>';
 
@@ -45,7 +54,7 @@ if(preg_match('/\A[\w\-\.]+\@[\w\-\.]+\.([a-z]+)\z/',$email)==0)
 }
 else
 {
-    print 'メールアドレス<br/>';
+    print '<div class="caption">メールアドレス</div>';
     print $email;
     print '<br/><br/>';
 
@@ -58,7 +67,7 @@ if(preg_match('/\A[0-9]+\z/',$postal1)==0)
 }
 else
 {
-    print '郵便番号<br/>';
+    print '<div class="caption">郵便番号</div>';
     print $postal1;
     print '-';
     print $postal2;
@@ -79,7 +88,7 @@ if($address=='')
 }
 else
 {
-    print '住所<br/>';
+    print '<div class="caption">住所</div>';
     print $address;
     print '<br/><br/>';
 
@@ -92,7 +101,7 @@ if(preg_match('/\A\d{2,5}-?\d{2,5}-?\d{4,5}\z/',$tel)==0)
 }
 else
 {
-    print '電話番号<br/>';
+    print '<div class="caption">電話番号</div>';
     print $tel;
     print '<br/><br/>';
 
@@ -112,7 +121,7 @@ if($chumon=='chumontouroku')
       $okflag=false;
   }
 
-  print '性別<br/>';
+  print '<div class="caption">性別</div>';
   if($danjo=='dan')
   {
       print '男性';
@@ -123,7 +132,7 @@ if($chumon=='chumontouroku')
   }
   print '<br/><br/>';
 
-  print '生まれた年<br/>';
+  print '<div class="caption">生まれた年</div>';
   print $birth;
   print '年代';
   print '<br/><br/>';
@@ -154,5 +163,6 @@ else{
 
 ?>
 
+</div>
 </body>
 </html>

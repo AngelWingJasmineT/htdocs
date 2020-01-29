@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -55,24 +66,25 @@ catch (Exception $e)
 
 ?>
 
-スタッフ修正<br/>
+<div class="menu">スタッフ修正</div>
 <br/>
-スタッフコード<br/>
+<div class="caption">スタッフコード</div>
 <?php print $staff_code; ?>
 <br/>
 <br/>
 <form method="post" action="staff_edit_check.php">
 <input type="hidden" name="code" value="<?php print $staff_code; ?>">
-スタッフ名<br/>
-<input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"><br/>
-パスワードを入力してください。<br/>
-<input type="password" name="pass" style="width:100px"><br/>
-パスワードをもう1度入力してください。<br/>
-<input type="password" name="pass2" style="width:100px"><br/>
+<div class="caption">スタッフ名</div>
+<input type="text" name="name" style="width:200px" value="<?php print $staff_name; ?>"><br/><br/>
+<div class="caption">パスワードを入力してください。</div>
+<input type="password" name="pass" style="width:100px"><br/><br/>
+<div class="caption">パスワードをもう1度入力してください。</div>
+<input type="password" name="pass2" style="width:100px"><br/><br/>
 <br/>
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">
 </form>
 
+</div>
 </body>
 </html>

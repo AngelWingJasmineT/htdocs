@@ -1,3 +1,9 @@
+<div class="head">
+  <div class="title">
+  JasmineT Shop
+  </div>
+</div>
+
 <?php
     session_start();
     session_regenerate_id(true);
@@ -6,9 +12,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -30,11 +39,11 @@ $pass=$post['pass'];
 $danjo=$post['danjo'];
 $birth=$post['birth'];
 
-print $onamae.'様<br/>';
+print $onamae.'様<br/><br/>';
 print 'ご注文ありがとうございました。<br/>';
-print $email.'にメールを送りましたのでご確認ください。<br/>';
+print $email.'にメールを送りましたのでご確認ください。<br/><br/>';
 print '商品は以下の住所に発送させていただきます。<br/>';
-print $postal1.'-'.$postal2.'<br/>';
+print '〒'.$postal1.'-'.$postal2.'<br/>';
 print $address.'<br/>';
 print $tel.'<br/>';
 
@@ -148,6 +157,7 @@ $dbh = null;
 
 if($chumon=='chumontouroku')
 {
+    print '<br/>';
     print '会員登録が完了いたしました。<br/>';
     print '次回からメールアドレスとパスワードでログインしてください。<br/>';
     print 'ご注文が簡単にできるようになります。<br/>';
@@ -205,5 +215,6 @@ catch(Exception $e)
 <br/>
 <a href="shop_list.php">商品画面へ</a>
 
+</div>
 </body>
 </html>
