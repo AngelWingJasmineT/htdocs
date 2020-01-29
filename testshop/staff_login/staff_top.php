@@ -3,7 +3,6 @@
 JasmineT Shop 管理画面
 </div>
 <div class="login">
-
 <?php
 session_start();
 session_regenerate_id(true);
