@@ -28,7 +28,7 @@ else
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../css/shop_product.css">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
 <title>Shop</title>
 </head>
 <body>
@@ -65,9 +65,9 @@ if($pro_gazou_name=='')
 }
 else
 {
-		$disp_gazou='<img src="../product/gazou/'.$pro_gazou_name.'">';
+		$disp_gazou='<img src="../product/gazou/'.$pro_gazou_name.'" width=100px height=100px>';
 }
-print '<a href="shop_cartin.php?procode='.$pro_code.'"><div class="link">カートにいれる</div></a><br/><br/>';
+print '<a href="shop_cartin.php?procode='.$pro_code.'"><div class="link">カートに入れる</div></a><br/><br/>';
 }
 catch (Exception $e)
 {
@@ -77,20 +77,21 @@ catch (Exception $e)
 
 ?>
 
-<div class="menu">商品情報参照</div><br/>
-<br/>
-<div class="menus">商品コード</div><br/>
-<?php print $pro_code; ?>
-<br/>
-<div class="menus">商品名</div><br/>
-<?php print $pro_name; ?>
-<br/>
-<div class="menus">価格</div><br/>
-<?php print $pro_price; ?>円
-<br/>
-<?php print $disp_gazou; ?>
-<br/>
-<br/>
+<div class="menu">商品詳細</div><br/>
+<table border="1">
+<tr>
+<td>商品コード</td>
+<td>商品名</td>
+<td>商品画像</td>
+<td>価格</td>
+</tr>
+<tr>
+    <td><?php print $pro_code; ?></td>
+    <td><?php print $pro_name; ?></td>
+    <td><?php print $disp_gazou; ?></td>
+    <td><?php print $pro_price; ?>円</td>
+</tr>
+</table>
 <form>
 <input type="button" onclick="history.back()" value="戻る">
 </form>

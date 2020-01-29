@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -41,7 +52,7 @@ else
 {
     print 'スタッフ名:';
     print $staff_name;
-    print '<br/>';
+    print 'に変更しますか。<br/>';
 }
 
 if($staff_pass=='')
@@ -75,5 +86,6 @@ else
 
 ?>
 
+</div>
 </body>
 </html>

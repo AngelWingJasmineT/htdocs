@@ -1,3 +1,8 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +19,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -54,6 +64,7 @@ while(true)
     print $rec['name'];
     print '<br/>';
 }
+print '<br/>';
 print '<input type="submit" name="disp" value="参照">';
 print '<input type="submit" name="add" value="追加">';
 print '<input type="submit" name="edit" value="修正">';
@@ -72,5 +83,6 @@ catch (Exception $e)
 <br/>
 <a href="../staff_login/staff_top.php">トップメニューへ</a><br/>
 
+</div>
 </body>
 </html>

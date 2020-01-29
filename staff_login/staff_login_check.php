@@ -1,3 +1,20 @@
+<div class="head">
+  <div class="title">
+  JasmineT Shop 管理画面
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
+<title>Shop</title>
+</head>
+<body>
+
+<div class="container">
+
 <?php
 
 try
@@ -49,3 +66,7 @@ catch (Exception $e)
 }
 
 ?>
+
+</div>
+</body>
+</html>

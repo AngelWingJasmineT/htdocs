@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -40,7 +51,7 @@ $stmt->execute();
 
 $dbh=null;
 
-print '商品一覧<br/><br/>';
+print '<div class="menu">商品一覧</div><br/>';
 
 print '<form method="post" action="pro_branch.php">';
 while(true)
@@ -55,6 +66,7 @@ while(true)
     print $rec['price'].'円';
     print '<br/>';
 }
+print '<br/>';
 print '<input type="submit" name="disp" value="参照">';
 print '<input type="submit" name="add" value="追加">';
 print '<input type="submit" name="edit" value="修正">';
@@ -73,5 +85,6 @@ catch (Exception $e)
 <br/>
 <a href="../staff_login/staff_top.php">トップメニューへ</a><br/>
 
+</div>
 </body>
 </html>

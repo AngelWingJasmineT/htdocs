@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -65,15 +76,18 @@ catch (Exception $e)
 
 ?>
 
-商品削除<br/>
+<div class="menu">商品削除</div>
 <br/>
-商品コード<br/>
+<div class="caption">商品コード</div>
 <?php print $pro_code; ?>
 <br/>
-商品名<br/>
+<br/>
+<div class="caption">商品名</div>
 <?php print $pro_name; ?>
 <br/>
+<br/>
 <?php print $disp_gazou; ?>
+<br/>
 <br/>
 この商品を削除してもよろしいですか？<br/>
 <br/>
@@ -84,5 +98,6 @@ catch (Exception $e)
 <input type="submit" value="OK">
 </form>
 
+</div>
 </body>
 </html>

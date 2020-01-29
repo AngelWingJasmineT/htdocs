@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 require_once('../common/common.php');
@@ -39,9 +50,9 @@ if($pro_name=='')
 }
 else
 {
-	print '商品名:';
+	print '<div class="caption">商品名:</div>';
 	print $pro_name;
-	print '<br />';
+	print '<br /><br />';
 }
 
 if(preg_match('/\A[0-9]+\z/',$pro_price)==0)
@@ -50,9 +61,9 @@ if(preg_match('/\A[0-9]+\z/',$pro_price)==0)
 }
 else
 {
-	print '価格:';
+	print '<div class="caption">価格:</div>';
 	print $pro_price;
-	print '円<br />';
+	print '円<br /><br />';
 }
 
 if($pro_gazou['size']>0)
@@ -91,5 +102,7 @@ else
 }
 
 ?>
+
+</div>
 </body>
 </html>

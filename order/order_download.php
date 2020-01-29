@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,20 +20,25 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 require_once('../common/common.php');
 ?>
 
-ダウンロードしたい注文日を選んでください。<br/>
+<div class="caption">ダウンロードしたい注文日を選んでください。</div>
 <form method="post" action="order_download_done.php">
 <?php pulldown_year(); ?>
 年
@@ -39,5 +50,6 @@ require_once('../common/common.php');
 <input type="submit" value="ダウンロードへ">
 </form>
 
+</div>
 </body>
 </html>

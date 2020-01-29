@@ -1,3 +1,20 @@
+<div class="head">
+<div class="title">
+JasmineT Shop
+</div>
+</div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
+<title>Shop</title>
+</head>
+<body>
+
+<div class="container">
+
 <?php
 
 try
@@ -50,3 +67,7 @@ catch (Exception $e)
 }
 
 ?>
+
+</div>
+</body>
+</html>

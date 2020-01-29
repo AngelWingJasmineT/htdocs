@@ -1,3 +1,9 @@
+<div class="head">
+  <div class="title">
+  JasmineT Shop
+  </div>
+</div>
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -13,9 +19,12 @@ if(isset($_SESSION['member_login'])==false)
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/shop_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 $code=$_SESSION['member_code'];
@@ -41,25 +50,25 @@ $postal2=$rec['postal2'];
 $address=$rec['address'];
 $tel=$rec['tel'];
 
-print 'お名前<br/>';
+print '<div class="caption">お名前</div>';
 print $onamae;
 print '<br/><br/>';
 
-print 'メールアドレス<br/>';
+print '<div class="caption">メールアドレス</div>';
 print $email;
 print '<br/><br/>';
 
-print '郵便番号<br/>';
+print '<div class="caption">郵便番号</div>';
 print $postal1;
 print '-';
 print $postal2;
 print '<br/><br/>';
 
-print '住所<br/>';
+print '<div class="caption">住所</div>';
 print $address;
 print '<br/><br/>';
 
-print '電話番号<br/>';
+print '<div class="caption">電話番号</div>';
 print $tel;
 print '<br/><br/>';
 
@@ -76,5 +85,6 @@ print '</form>';
 
 ?>
 
+</div>
 </body>
 </html>

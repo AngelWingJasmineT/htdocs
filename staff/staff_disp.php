@@ -1,3 +1,9 @@
+<div class="head">
+<div class="title">
+JasmineT Shop 管理画面
+</div>
+<div class="login">
+
 <?php
 session_start();
 session_regenerate_id(true);
@@ -14,14 +20,19 @@ else
     print '<br/>';
 }
 ?>
+</div>
+</div>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/kanri_common.css">
 <title>Shop</title>
 </head>
 <body>
+
+<div class="container">
 
 <?php
 
@@ -55,12 +66,12 @@ catch (Exception $e)
 
 ?>
 
-スタッフ情報参照<br/>
+<div class="menu">スタッフ情報参照</div>
 <br/>
-スタッフコード<br/>
+<div class="caption">スタッフコード</div>
 <?php print $staff_code; ?>
-<br/>
-スタッフ名<br/>
+<br/><br/>
+<div class="caption">スタッフ名</div>
 <?php print $staff_name; ?>
 <br/>
 <br/>
@@ -68,5 +79,6 @@ catch (Exception $e)
 <input type="button" onclick="history.back()" value="戻る">
 </form>
 
+</div>
 </body>
 </html>
