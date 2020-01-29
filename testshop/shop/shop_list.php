@@ -1,16 +1,3 @@
-<?php
-function http_basic_authenticate_with($name,$password,$realm = "Protected area"){
-  if (!isset($_SERVER['PHP_AUTH_USER']) || !($_SERVER['PHP_AUTH_USER'] == $name && $_SERVER['PHP_AUTH_PW'] == $password )) {
-    header('WWW-Authenticate: Basic realm="'.$realm.'"');
-    header('HTTP/1.0 401 Unauthorized');
-    echo 'Not allowed to access.';
-    exit;
-  }
-}
-
-http_basic_authenticate_with("aaaa","1111"); 
-?>
-
 <div class="head">
 <div class="title">
 JasmineT Shop
